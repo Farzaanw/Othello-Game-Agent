@@ -1,7 +1,5 @@
 from Board import * 
 
-
-
 class OthelloBoard(Board):
     """Class for Othello board
     children: successor positions for the current position
@@ -15,7 +13,7 @@ class OthelloBoard(Board):
         self.move = None
         self.value = None 
 
-#PYTHON: this function is substitute for clone. call as New = Old.cloneOBoard()
+    #PYTHON: this function is substitute for clone. call as New = Old.cloneOBoard()
     def cloneOBoard(self):
         # When making a new board with clone, call initialize afterwards
         tmp = OthelloBoard(self.cols, self.rows, self.p1_symbol, self.p2_symbol)

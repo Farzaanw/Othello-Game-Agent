@@ -21,7 +21,6 @@ class Direction(Enum):
 #global empty state
 EMPTY = '.'
 
-
 class Board:
     def __init__(self, cols, rows):
         self.cols = cols
@@ -29,14 +28,12 @@ class Board:
         #Col x Row grid filled with "EMPTY"
         self.grid = [[EMPTY for x in range(cols)] for y in range(rows)]
 
-
-    #PYTHON    #Duplicate a board with B2 = B1.cloneBoard()
+    #Duplicate a board with B2 = B1.cloneBoard()
     #THIS SERVES AS BOTH COPY CONSTRUCTOR AND ASSIGNMENT
     def cloneBoard(self):
         tmp = Board(self.cols, self.rows)
         tmp.grid = copy.deepcopy(self.grid)
         return tmp
-
 
     #empties grid. No other references will remain.
     def delete_grid(self):
@@ -63,8 +60,6 @@ class Board:
         else:
             self.grid[col][row] = val
 
-
-
     def is_cell_empty(self, col, row):
         if self.grid[col][row] == EMPTY:
             return True
@@ -75,7 +70,6 @@ class Board:
             return True
         else:
             return False
-
 
     def display(self):
         string2 = '--' * self.cols
@@ -88,4 +82,3 @@ class Board:
             print(string)
         print(string2)
         
-
