@@ -57,10 +57,6 @@ Terminal state utilities:
 - `+∞ (inf)` → Win  
 - `-∞ (-inf)` → Loss  
 
----
-
-## 📊 Evaluation Functions
-
 For depth-limited search, non-terminal states are evaluated using heuristics:
 
 ### 🔹 H0 — Piece Difference
